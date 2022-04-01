@@ -163,7 +163,7 @@ class WindowController {
     final response = await request.close();
     final content = await utf8.decodeStream(response);
 
-    return openContent(content);
+    return openContent(content, contentType: contentType);
   }
 
   /// Loads content from "file", "http", or "https" URI.
